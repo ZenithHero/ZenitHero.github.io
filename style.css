@@ -1,0 +1,714 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    width:100%;
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at center,#45137a,#170028,#050008);
+
+    color:white;
+
+}
+
+
+
+/* ==========================
+        PANTALLA INICIAL
+========================== */
+
+
+.inicio{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #050008,
+    #260044
+    );
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+
+    z-index:10;
+
+
+    transition:1.5s;
+
+    padding:20px;
+
+}
+
+
+
+.inicio h1{
+
+
+    font-size:clamp(2.5rem,8vw,4rem);
+
+
+    color:#f7dcff;
+
+
+    text-shadow:
+
+    0 0 15px #db83ff,
+    0 0 40px #9c35ff;
+
+
+}
+
+
+
+.inicio p{
+
+    margin-top:15px;
+
+    font-size:clamp(1rem,4vw,1.5rem);
+
+    color:#ead8ff;
+
+}
+
+
+
+
+
+button{
+
+
+    margin-top:25px;
+
+    padding:14px 35px;
+
+
+    border:none;
+
+    border-radius:50px;
+
+
+    background:#bf63ff;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 0 25px #c86cff;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+
+
+
+/* ==========================
+        ESTRELLAS
+========================== */
+
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:0;
+
+}
+
+
+
+
+/* ==========================
+        PAGINA
+========================== */
+
+
+.pagina{
+
+
+    position:relative;
+
+    z-index:2;
+
+
+    min-height:100vh;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    padding:20px;
+
+
+    opacity:0;
+
+
+    transition:1.5s;
+
+}
+
+
+
+
+
+.titulo{
+
+
+    font-size:clamp(2rem,7vw,3.5rem);
+
+
+    color:#f7ddff;
+
+
+    text-shadow:
+
+    0 0 15px #d37aff,
+
+    0 0 50px #8d29ff;
+
+
+}
+
+
+
+.subtitulo{
+
+
+    margin-top:15px;
+
+
+    max-width:600px;
+
+
+    color:#e8d5ff;
+
+
+    font-size:clamp(.9rem,3vw,1.2rem);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        GALAXIA
+========================== */
+
+
+.planeta{
+
+
+    width:min(80vw,330px);
+
+    height:min(80vw,330px);
+
+
+    margin-top:50px;
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+.nucleo{
+
+
+    width:35%;
+
+    aspect-ratio:1;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    background:
+
+    radial-gradient(
+    circle,
+    white,
+    #ffcfff,
+    #a63cff,
+    transparent
+    );
+
+
+
+    box-shadow:
+
+
+    0 0 30px white,
+
+    0 0 80px #dd7cff,
+
+    0 0 150px #8125ff;
+
+
+
+    animation:pulso 3s infinite;
+
+
+}
+
+
+
+
+
+
+.orbita{
+
+
+    position:absolute;
+
+
+    border-radius:50%;
+
+
+    border:
+
+    2px solid rgba(255,255,255,.18);
+
+
+}
+
+
+
+
+.uno{
+
+    width:45%;
+
+    height:45%;
+
+
+    animation:girar 10s linear infinite;
+
+}
+
+
+
+
+.dos{
+
+    width:70%;
+
+    height:70%;
+
+
+    animation:girar 15s linear infinite reverse;
+
+}
+
+
+
+
+
+.tres{
+
+    width:95%;
+
+    height:95%;
+
+
+    animation:girar 22s linear infinite;
+
+}
+
+
+
+
+
+
+/* ==========================
+        CONTADOR
+========================== */
+
+
+.contador{
+
+
+    margin-top:35px;
+
+
+    width:min(90%,400px);
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+    backdrop-filter:blur(10px);
+
+
+    box-shadow:
+
+    0 0 30px #933cff;
+
+
+}
+
+
+
+.contador h2{
+
+    font-size:clamp(1.1rem,4vw,1.5rem);
+
+}
+
+
+
+#tiempo{
+
+
+    margin-top:10px;
+
+
+    color:#ffd8ff;
+
+
+    font-size:clamp(.8rem,3vw,1.2rem);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        CARTA
+========================== */
+
+
+.sobre{
+
+
+    margin-top:25px;
+
+
+    font-size:55px;
+
+
+    cursor:pointer;
+
+
+    animation:flotar 3s infinite;
+
+
+}
+
+
+
+
+
+.carta{
+
+
+    width:min(90%,350px);
+
+
+    padding:25px;
+
+
+    position:absolute;
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:20px;
+
+
+    opacity:0;
+
+
+    transform:scale(0);
+
+
+    transition:1s;
+
+
+    box-shadow:
+
+    0 0 40px #c05cff;
+
+
+}
+
+
+
+.carta.activa{
+
+
+    opacity:1;
+
+
+    transform:scale(1);
+
+
+}
+
+
+
+.carta p{
+
+
+    margin-top:15px;
+
+
+    line-height:1.6;
+
+
+    font-size:.95rem;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        CORAZONES
+========================== */
+
+
+.corazon{
+
+
+    position:fixed;
+
+
+    font-size:25px;
+
+
+    pointer-events:none;
+
+
+    animation:subir 7s linear forwards;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================
+        ANIMACIONES
+========================== */
+
+
+@keyframes girar{
+
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+@keyframes pulso{
+
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+
+}
+
+
+
+
+
+@keyframes flotar{
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
+}
+
+
+
+
+@keyframes subir{
+
+
+from{
+
+transform:translateY(100vh);
+
+opacity:1;
+
+}
+
+
+to{
+
+transform:translateY(-10vh);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+/* ==========================
+        CELULARES PEQUEÑOS
+========================== */
+
+
+@media(max-width:400px){
+
+
+    .planeta{
+
+        margin-top:35px;
+
+    }
+
+
+    .sobre{
+
+        font-size:45px;
+
+    }
+
+
+    .carta{
+
+        font-size:.85rem;
+
+    }
+
+
+}
